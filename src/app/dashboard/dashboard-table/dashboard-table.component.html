@@ -17,8 +17,8 @@
           <ng-container *ngIf="item.qtyOnHand == 0">
             <td>{{i}}</td>
             <td>{{item.code}}</td>
-            <td>{{item.description}}</td>
-            <td>{{item.price}}</td>
+            <td>{{item.description | uppercase}}</td>
+            <td>{{item.price | currency: 'LKR'}}</td>
             <td [ngStyle]="{'color': 'Blue'}">{{item.qtyOnHand}}</td>
           </ng-container>
         </tr>
@@ -34,4 +34,8 @@
   </div>
 </div>
 
-
+<div>
+  <pre>
+  {{itemList | json}}
+  </pre>
+</div>
