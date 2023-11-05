@@ -1,0 +1,37 @@
+<div [ngSwitch]="role">
+  <div *ngSwitchCase="'Admin'">
+    <div class="m-5" *ngIf="numberOfSuppliers > 0">
+      <h2 [ngClass]="'tbl-title'">Out of stock item list:</h2>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Index</th>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Qty On Hand</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of itemList;  let i = index;">
+          <ng-container *ngIf="item.qtyOnHand == 0">
+            <td>{{i}}</td>
+            <td>{{item.code}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price}}</td>
+            <td [ngStyle]="{'color': 'Blue'}">{{item.qtyOnHand}}</td>
+          </ng-container>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div *ngSwitchCase="'User'">
+    <H1>User dashboard here</H1>
+  </div>
+  <div *ngSwitchDefault>
+    <h1>You are not authorized to here!</h1>
+  </div>
+</div>
+
+

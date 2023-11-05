@@ -5,16 +5,17 @@
     <div class="card col-4" style="width: 18rem;">
       <img src="assets/cartoon-customer.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <p class="card-text">Number of customer: <span>{{numberOfCustomers}}</span></p>
+        <p class="card-text">Number of customer: <span [ngStyle]="{'color': 'Green'}">{{numberOfCustomers}}</span></p>
       </div>
     </div>
     <div [hidden]="isHidden" class="card col-4" style="width: 18rem;">
       <img src="assets/item.jpeg" class="card-img-top" alt="...">
       <div class="card-body">
-        <p class="card-text">Number of item: <span>{{numberOfItems}}</span></p>
+        <p class="card-text">Number of item: <span [ngStyle]="{'color': 'Red'}">{{numberOfItems}}</span></p>
       </div>
     </div>
   </div>
 </div>
 <button type="button" class="btn btn-info m-5" (click)="toggleButtonAction()">Toggle</button>
 
+<app-dashboard-table></app-dashboard-table>
