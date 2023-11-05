@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {CustomerComponent} from "./customer/customer.component";
+import {NotfoundComponentComponent} from "./notfound-component/notfound-component.component";
 
 const routes: Routes = [
   {
@@ -9,6 +10,12 @@ const routes: Routes = [
   },
   {
     path: 'customer', component: CustomerComponent
+  },
+  {
+    path: '', redirectTo: 'dashboard', pathMatch: 'full'
+  },
+  {
+    path: '**', component: NotfoundComponentComponent
   }
 ];
 

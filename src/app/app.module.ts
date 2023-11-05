@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CustomerComponent } from './customer/customer.component';
+import { NotfoundComponentComponent } from './notfound-component/notfound-component.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CustomerComponent } from './customer/customer.component';
     DashboardHeaderComponent,
     DashboardTableComponent,
     NavigationComponent,
-    CustomerComponent
+    CustomerComponent,
+    NotfoundComponentComponent
   ],
   imports: [
     BrowserModule,
