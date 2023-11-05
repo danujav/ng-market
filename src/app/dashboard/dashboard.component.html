@@ -1,1 +1,20 @@
 <app-dashboard-header></app-dashboard-header>
+
+<div class="container text-center  mt-5">
+  <div class="row justify-content-evenly">
+    <div class="card col-4" style="width: 18rem;">
+      <img src="assets/cartoon-customer.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Number of customer: <span>{{numberOfCustomers}}</span></p>
+      </div>
+    </div>
+    <div [hidden]="isHidden" class="card col-4" style="width: 18rem;">
+      <img src="assets/item.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Number of item: <span>{{numberOfItems}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" class="btn btn-info m-5" (click)="toggleButtonAction()">Toggle</button>
+
