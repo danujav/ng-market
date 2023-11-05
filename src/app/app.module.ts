@@ -17,6 +17,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { NotfoundComponentComponent } from './notfound-component/notfound-component.component';
 import { PostComponent } from './post/post.component';
 import { ItemComponent } from './item/item.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ItemComponent } from './item/item.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
