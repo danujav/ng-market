@@ -15,6 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CustomerComponent } from './customer/customer.component';
 import { NotfoundComponentComponent } from './notfound-component/notfound-component.component';
+import { PostComponent } from './post/post.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NotfoundComponentComponent } from './notfound-component/notfound-compon
     DashboardTableComponent,
     NavigationComponent,
     CustomerComponent,
-    NotfoundComponentComponent
+    NotfoundComponentComponent,
+    PostComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
