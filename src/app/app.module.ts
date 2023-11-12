@@ -18,6 +18,7 @@ import { NotfoundComponentComponent } from './notfound-component/notfound-compon
 import { PostComponent } from './post/post.component';
 import { ItemComponent } from './item/item.component';
 import {HttpClientModule} from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

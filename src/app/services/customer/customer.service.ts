@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Customer } from 'src/app/customer/customer';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +13,9 @@ export class CustomerService {
 
   get(): Observable<any> {
     return this.http.get(this.URL);
+  }
+  
+  create(customer: Customer): any{
+    return this.http.post(this.URL, customer);
   }
 }
