@@ -3,3 +3,22 @@
     <h1 class="col text-danger">Customer Component</h1>
   </div>
 </div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Tel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customersData;  let i = index;">
+      <td>{{customer.id}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.tel}}</td>
+    </tr>
+  </tbody>
+</table>
